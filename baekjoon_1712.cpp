@@ -1,18 +1,23 @@
 #include <stdio.h>
 int main(void) {
-	int must_price;
-	int per_price;
-	int per_cost;
-	double x;
-	int i;
-	scanf("%d %d %d", &must_price, &per_price, &per_cost);
-	if (per_price < per_cost) {
-		 i = must_price / (per_cost - per_price);
-
-		x = must_price % (per_cost - per_price);
-		printf("%d", i + 1);
-	}
-	else {
-		printf("-1");
+	int num=0;
+	int kg;
+	scanf("%d", &kg);
+	while (kg >= -2) {
+		printf("%d", kg);
+		if (kg == 0) {
+			printf("%d", num);
+		}
+		else if (kg < 0) {
+			printf("-1");
+		}
+		else if (kg >= 5) {
+			kg = kg - 5;
+			num = num + 1;
+		}
+		else if (kg >= 3) {
+			kg = kg - 3;
+			num = num + 1;
+		}
 	}
 }
