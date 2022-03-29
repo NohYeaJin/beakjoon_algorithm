@@ -10,4 +10,3 @@ for i in num_list:
         else:
             total += (i-a)//b
 print(total+len(num_list))
-
